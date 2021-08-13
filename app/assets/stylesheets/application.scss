@@ -12,5 +12,26 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
  */
+$navbar-default-bg: black;
+
 @import "bootstrap/scss/bootstrap";
+
+.container{ 
+    text-align: center;
+}
+
+#logo{
+    float:left;
+    font-size:1.7em;
+    color: #f17ed9;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover{
+    color: #0084ff;
+    text-decoration: none;
+}
