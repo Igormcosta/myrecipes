@@ -14,18 +14,26 @@
  *= require_self
  *= require bootstrap
  */
-$navbar-default-bg: black;
+
 
 @import "bootstrap/scss/bootstrap";
 
+.navbar{
+    background-color: rgb(0, 129, 11);   
+}
 .container{ 
     text-align: center;
 }
-
+.jumbotron{
+    background-image: asset-url('cover_image.png');
+    background-size: cover;
+    height: 300px;
+    border-radius: 30px;
+}
 #logo{
     float:left;
     font-size:1.7em;
-    color: #f17ed9;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
@@ -34,4 +42,23 @@ $navbar-default-bg: black;
 #logo:hover{
     color: #0084ff;
     text-decoration: none;
+}
+
+.jumbotron h1, h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.btn-xlarge{
+    background-color:rgb(0, 129, 11) !important;
+    border-color:#fff !important;
+    
+}
+
+.btn-xlarge:hover{
+    color:#fff !important;
+    text-decoration: none !important;
 }
