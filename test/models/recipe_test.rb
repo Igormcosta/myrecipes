@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RecipeTest < ActiveSupport:TestCase
+class RecipeTest < ActiveSupport::TestCase
 
     def setup
         @recipe = Recipe.new(name: "vegetable", description: "great vegetable recipe")
@@ -25,12 +25,12 @@ class RecipeTest < ActiveSupport:TestCase
         assert_not @recipe.valid?
     end
 
-    test "description shouldn't be less than 5 characters"
+    test "description shouldn't be less than 5 characters" do
         @recipe.description = "a" * 3
         assert_not @recipe.valid?
     end
 
-    test "description shouldn't be more than 500 characters"
+    test "description shouldn't be more than 500 characters" do
         @recipe.description = "a" * 501
         assert_not @recipe.valid?
     end
