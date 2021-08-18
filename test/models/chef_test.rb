@@ -31,7 +31,7 @@ class ChefTest < ActiveSupport::TestCase
     end
     
     test "email should accept correct format" do
-        valid_emails = %w[user@example.com USER@gmail.com M.first@yahoo.br]
+        valid_emails = %w[user@example.com USER@gmail.com M.first@yahoo.br john+smith@co.uk.org]
         valid_emails.each do |valids|
             @chef.email = valids
             assert @chef.valid?, "#{valids.inspect} should be valid"
@@ -39,7 +39,7 @@ class ChefTest < ActiveSupport::TestCase
     end
     
     test "email reject invalid addresses" do
-        invalid_emails= %w[user@example USER@gmail,com M.first@yahoo.]
+        invalid_emails= %w[user@example USER@gmail,com M.first@yahoo. joe@bar+foo.com]
         invalid_emails.each do |invalids|
             @chef.email= invalids
             assert_not @chef.valid?, "#{invalids.inspect} should be invalid"
