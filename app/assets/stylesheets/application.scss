@@ -18,9 +18,9 @@
 
 @import "bootstrap/scss/bootstrap";
 
-.navbar{
+.navbar{ 
     background-color: rgb(0, 129, 11);   
-}
+}/*barra de navegação*/ 
 .container{ 
     text-align: center;
 }
@@ -29,7 +29,7 @@
     background-size: cover;
     height: 300px;
     border-radius: 30px;
-}
+}/*imagem de fundo da pag principal*/
 #logo{
     float:left;
     font-size:1.7em;
@@ -64,4 +64,12 @@
 
 .description{
     margin-top: 0;
-}
+}/*margem da descrição*/
+
+.well a{
+    color: rgb(0, 129, 11) !important;
+}/*Link de receita */
+
+.mb-1 a{
+    color: rgb(0, 129, 11) !important;
+}/*Link do rodape*/ 
