@@ -4,13 +4,13 @@ class RecipesTest < ActionDispatch::IntegrationTest
   
   def setup
     @chef = Chef.create!(chefname: "Igor", email: "igor@example.com")
-    @recipe = Recipe.create(name: "vegetable sautee", description: "great vegetable sautee, add vegetable and oil")
-    @recipe2 = @chef.recipes.build(name: "chicken saute", descriprion: "great chicken")
+    @recipe = Recipe.create(name: "vegetable sautee", description: "great vegetable sautee, add vegetable and oil", chef: @chef)
+    @recipe2 = @chef.recipes.build(name: "chicken saute", description: "great chicken dish")
     @recipe2.save
   end
 
   test "should get recipes index" do
-    get recipes_url
+    get recipes_path
     assert_response :success
   end
 
@@ -18,7 +18,7 @@ class RecipesTest < ActionDispatch::IntegrationTest
     get recipes_path
     assert_template 'recipes/index'
     assert_match @recipe.name, response.body
-    assert_match @recipe2.nome, response.body
+    assert_match @recipe2.name, response.body
   end
 
 end
