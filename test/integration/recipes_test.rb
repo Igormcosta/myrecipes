@@ -33,9 +33,9 @@ class RecipesTest < ActionDispatch::IntegrationTest
     get new_recipe_path
     assert_template 'recipes/new'
     name_of_recipe = "chicken saute"
-    description_of_recipe = "add chiken, add vegetables, cook for 20 minutes, serve delicious meal"
+    description_of_recipe = "add chicken, add vegetables, cook for 20 minutes, serve delicious meal"
     assert_difference 'Recipe.count', 1 do
-      post recipes_path, params:{recipe{ name: name_of_recipe, description: description_of_recipe}}
+    post recipes_path, params:{recipe:{ name: name_of_recipe, description: description_of_recipe}}
     end
     follow_redirect!
     assert_match name_of_recipe.captalize, response.body
