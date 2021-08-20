@@ -21,9 +21,15 @@
 .navbar{ 
     background-color: rgb(0, 129, 11);   
 }/*barra de navegação*/ 
-.container{ 
+.center-btn{
     text-align: center;
+    margin-top: 50px;
 }
+
+.btn-position{
+    margin-top: 30px;
+}
+
 .jumbotron{
     background-image: asset-url('cover_image.png');
     background-size: cover;
@@ -66,16 +72,54 @@
     margin-top: 0;
 }/*margem da descrição*/
 
-.well a{
-    color: rgb(0, 129, 11) !important;
-}/*Link de receita */
+
 .colormatch a {
     color: rgb(0, 129, 11) !important;
-}
-.mb-1 a{
-    color: rgb(0, 129, 11) !important;
-}/*Link do rodape*/ 
-
-.chef_info{
-    margin-top: 10px;
 } 
+
+
+.container-index{
+    background-color:  rgb(206, 206, 206);
+    margin: 30px;
+    border-radius: 30px !important;
+}
+.chef_info{
+    text-align: center;
+    margin: auto;
+    border-radius: 30px !important;
+} 
+
+.well{
+    text-align: center;
+    a{
+        color: rgb(0, 129, 11);
+    }
+}
+.recipe-actions{
+    padding-top: 5px !important;
+    text-align:center;
+    margin: 30px;
+    a {
+        color:#fff !important;
+    }
+}
+
+.col-md-offset-2{
+    background-color:  rgb(206, 206, 206);
+    margin: auto;
+    border-radius: 30px;
+    text-align: center !important;
+}
+
+.pull-right{
+    align-items: center;
+}
+
+.footer-pos{
+    background-color:  rgb(206, 206, 206);
+    bottom:0;
+    width:100%;
+    a{
+        color: rgb(0, 129, 11) !important;
+    }/*Link do rodape*/ 
+}
