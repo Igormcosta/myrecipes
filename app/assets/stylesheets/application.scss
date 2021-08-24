@@ -126,4 +126,18 @@
 .center{
     text-align: center;
     margin: auto;
+    align-items: center;
+}
+
+.listing{
+    list-style: none;
+    margin: auto;
+}
+.chef-title{
+    color: rgb(0, 129, 11) ;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.list-center{
+    margin: auto;
 }
