@@ -82,10 +82,6 @@
     background-color:  rgb(206, 206, 206);
     margin: 30px;
     border-radius: 30px !important;
-}
-.center_chef{
-    text-align: center;
-    margin: 10px;
 } 
 
 .well{
@@ -127,6 +123,9 @@
     text-align: center;
     margin: auto;
     align-items: center;
+    img{
+        border-radius: 90px;
+    }
 }
 
 .listing{
@@ -137,7 +136,4 @@
     color: rgb(0, 129, 11) ;
     font-weight: bold;
     font-size: 1.25em;
-}
-.list-center{
-    margin: auto;
 }
