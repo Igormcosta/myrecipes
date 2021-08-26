@@ -27,10 +27,22 @@
           </ul>
         </li>
       </ul>
-      <li class="nav-item">
-          <%= link_to "Log in", login_path, class: "navbar-brand"%>
+      <% if logged_in?%>
+        <li class="nav-item">
+          <%= link_to "View Profile", chef_path(current_chef), class: "navbar-brand"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit Profile", edit_chef_path(current_chef), class: "navbar-brand"%>
+        </li>
+        <li class="nav-item">
           <%= link_to "Log out", logout_path, method: :delete, class: "navbar-brand"%>
-      </li>
+        </li>
+        
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Log in", login_path, class: "navbar-brand"%>
+        </li>
+      <% end %>
     </div>
   </div>
 </nav>
