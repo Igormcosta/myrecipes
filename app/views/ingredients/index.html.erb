@@ -1,5 +1,9 @@
 <%= render 'shared/page_title', title: "Available Ingredients"%>
 
+<div align = "center", class = "chef-title well col-md-4 center">
+<%= link_to "New Ingredient", new_ingredient_path %>
+</div>
+
 <div align = "center">
     <%= will_paginate %>
         <% @ingredients.each do |ing| %>
