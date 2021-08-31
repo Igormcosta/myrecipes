@@ -1,8 +1,10 @@
 <%= render 'shared/page_title', title: "Available Ingredients"%>
 
-<div align = "center", class = "chef-title well col-md-4 center">
-<%= link_to "New Ingredient", new_ingredient_path %>
-</div>
+<% if logged_in? && current_chef.admin? %>
+    <div align = "center", class = "chef-title well col-md-4 center">
+    <%= link_to "New Ingredient", new_ingredient_path %>
+    </div>
+<% end %>
 
 <div align = "center">
     <%= will_paginate %>
@@ -13,7 +15,7 @@
                         <li class = "chef-title"><%= link_to ing.name.capitalize, ingredient_path(ing) %></li>
                         <li><small><%= pluralize(ing.recipes.count, "recipe") if ing.recipes%></small></li>
                         <% if logged_in? and current_chef.admin? %>
-                            <li><%= link_to "Edit this chef", ingredient_path(ing)%></li>
+                            <li><%= link_to "Edit this ingredient", edit_ingredient_path(ing)%></li>
                         <% end %>
                     </div>
                 </div>
